@@ -1,0 +1,20 @@
+
+[{
+	"product_name_str": "apple pie",
+	"price_in_cents_int": 595
+},{
+	"product_name_str": "cherry pie",
+	"price_in_cents_int": 395
+},{
+	"product_name_str": "apple pie",
+	"price_in_cents_int": 795
+},{
+	"product_name_str": "key lime pie",
+	"price_in_cents_int": 195
+},{
+	"product_name_str": "apple pie",
+	"price_in_cents_int": 195
+},{
+	"product_name_str": "apple pie",
+	"price_in_cents_int": 4495
+}]
