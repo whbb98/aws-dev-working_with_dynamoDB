@@ -7,7 +7,7 @@ import boto3, json
 
 def batch_put(food_list):
     DDB = boto3.resource('dynamodb', region_name='us-east-1')
-    table = DDB.Table('<FMI>')
+    table = DDB.Table('FoodProducts')
     with table.batch_writer() as batch:
         for food in food_list:
             product_name = food['product_name_str']

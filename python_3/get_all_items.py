@@ -10,7 +10,7 @@ def get_all_items():
 
     DDB = boto3.resource('dynamodb', region_name='us-east-1')
 
-    table = DDB.Table('<FMI_1>')
+    table = DDB.Table('FoodProducts')
 
     response = table.scan()
     data = response['Items']

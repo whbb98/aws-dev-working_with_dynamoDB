@@ -15,8 +15,8 @@ def scan_menu_items():
     table = DDB.Table('FoodProducts')
 
     response = table.scan(
-                IndexName='<FMI_1>',
-                FilterExpression=Not(Attr('<FMI_2>').contains('out of stock')))
+                IndexName='special_GSI',
+                FilterExpression=Not(Attr('tags').contains('out of stock')))
         
     data = response['Items']
     

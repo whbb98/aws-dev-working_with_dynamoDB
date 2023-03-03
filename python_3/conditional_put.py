@@ -17,25 +17,25 @@ def conditional_put():
     
     try:
         response = DDB.put_item(
-            TableName='<FMI_1>',
+            TableName='FoodProducts',
             Item={
                 'product_name': {
-                    'S': '<FMI_2>'
+                    'S': 'cherry pie'
                 },
                 'product_id': {
-                    'S': '<FMI_3>'
+                    'S': 'a555'
                 },
                 'price_in_cents':{
-                    'N': '<FMI_4>' #number passed in as a string (ie in quotes)
+                    'N': '595' #number passed in as a string (ie in quotes)
                 },
                 'description':{
-                    'S': "<FMI_5>"
+                    'S': "It is amazing!"
                 },
                 'tags':{
                     'L': [{
-                            'S': '<FMI_6>'
+                            'S': 'whole pie'
                         },{
-                            'S': '<FMI_7>'
+                            'S': 'apple'
                         }]
                 }
             },

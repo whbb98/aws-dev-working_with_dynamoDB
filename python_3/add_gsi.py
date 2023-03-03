@@ -21,7 +21,7 @@ def update_table():
                     'KeySchema': [
                         {
                             'AttributeName': 'special',
-                            'KeyType': '<FMI_1>'
+                            'KeyType': 'HASH'
                         }
                     ],
                         'Projection': {

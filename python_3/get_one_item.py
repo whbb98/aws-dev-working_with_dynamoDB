@@ -12,7 +12,7 @@ def get_one_item(product):
 
     response = DDB.get_item(TableName='FoodProducts',
         Key={
-         '<FMI_1>': {'S': product}
+         'product_name': {'S': product}
          }
         )
 

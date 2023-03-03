@@ -8,8 +8,8 @@ import boto3, json
 
 def batch_put(food_list):
     DDB = boto3.resource('dynamodb', region_name='us-east-1')
-    table = DDB.Table('<FMI_1>')
-    with table.batch_writer(overwrite_by_pkeys=['<FMI_2>']) as batch:
+    table = DDB.Table('FoodProducts')
+    with table.batch_writer() as batch:
         for food in food_list:
             product_name = food['product_name_str']
             price_in_cents = food['price_in_cents_int']
@@ -24,7 +24,7 @@ def batch_put(food_list):
 if __name__ == '__main__':
     with open("../resources/test.json") as json_file:
         food_list = json.load(json_file)
-    batch_put(food_list)
+        batch_put(food_list)
 """
 Copyright @2021 [Amazon Web Services] [AWS]
     

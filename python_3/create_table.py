@@ -10,7 +10,7 @@ def create_table():
     DDB = boto3.resource('dynamodb', region_name='us-east-1')
 
     params = {
-        'TableName': '<FMI_1>',
+        'TableName': 'FoodProducts',
         'KeySchema': [
             {'AttributeName': 'product_name', 'KeyType': 'HASH'}
         ],
